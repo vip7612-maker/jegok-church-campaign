@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>제곡교회 | 새로운 40년의 벽돌을 쌓다 - 성전 건축 모금 캠페인</title>
+  <meta name="description" content="홍천군 남면 제곡교회의 새 성전 건축을 위한 모금 캠페인입니다. 안전한 예배 공간, 다문화 선교, 다음 세대를 위해 벽돌 한 장의 사랑을 나눠주세요." />
+  <meta name="keywords" content="제곡교회, 성전건축, 모금, 교회건축, 홍천, 후원" />
+  <meta property="og:title" content="제곡교회 - 새로운 40년의 벽돌을 쌓다" />
+  <meta property="og:description" content="성도님의 벽돌 한 장이 제곡교회의 내일이 됩니다" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/css/variables.css" />
+  <link rel="stylesheet" href="/src/css/reset.css" />
+  <link rel="stylesheet" href="/src/css/animations.css" />
+  <link rel="stylesheet" href="/src/css/main.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="main-nav" class="nav">
+    <div class="nav__container">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-cross">✝</span>
+        <span class="nav__logo-text">제곡교회</span>
+      </a>
+      <button id="nav-toggle" class="nav__toggle" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu" class="nav__menu">
+        <li><a href="#story" class="nav__link">우리의 이야기</a></li>
+        <li><a href="#why-now" class="nav__link">왜 지금인가</a></li>
+        <li><a href="#vision" class="nav__link">제곡의 비전</a></li>
+        <li><a href="#donate" class="nav__link">함께 짓기</a></li>
+        <li><a href="#wall" class="nav__link">감사의 벽</a></li>
+        <li><a href="#donate" class="nav__link nav__link--cta">후원하기</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero__bg-wrapper">
+      <div class="hero__bg" style="background-image: url('/src/assets/hero-bg.png')"></div>
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__subtitle reveal-up">홍천군 남면 · 1983년 설립 · 41주년</p>
+      <h1 class="hero__title reveal-up">
+        <span class="hero__title-line">제곡교회,</span>
+        <span class="hero__title-line hero__title-accent">새로운 40년의</span>
+        <span class="hero__title-line hero__title-accent">벽돌을 쌓다</span>
+      </h1>
+      <p class="hero__desc reveal-up">성도님의 벽돌 한 장이 제곡교회의 내일이 됩니다</p>
+      <div class="hero__actions reveal-up">
+        <a href="#donate" class="btn btn--primary btn--lg">
+          <span class="btn__icon">🧱</span> 벽돌 한 장 후원하기
+        </a>
+        <a href="#story" class="btn btn--ghost btn--lg">이야기 보기 ↓</a>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator">
+      <div class="hero__scroll-mouse">
+        <div class="hero__scroll-wheel"></div>
+      </div>
+      <span>스크롤하여 시작하기</span>
+    </div>
+  </section>
+
+  <!-- Building Progress Bar (Fixed) -->
+  <div id="building-progress" class="building-progress">
+    <div class="building-progress__bar">
+      <div class="building-progress__fill" id="progress-fill"></div>
+    </div>
+    <div class="building-progress__stages">
+      <div class="building-progress__stage active" data-stage="foundation">
+        <div class="building-progress__stage-icon">🏗️</div>
+        <span>기초/토목</span>
+      </div>
+      <div class="building-progress__stage" data-stage="frame">
+        <div class="building-progress__stage-icon">🦴</div>
+        <span>골조</span>
+      </div>
+      <div class="building-progress__stage" data-stage="walls">
+        <div class="building-progress__stage-icon">🧱</div>
+        <span>벽면</span>
+      </div>
+      <div class="building-progress__stage" data-stage="roof">
+        <div class="building-progress__stage-icon">🏠</div>
+        <span>지붕</span>
+      </div>
+      <div class="building-progress__stage" data-stage="interior">
+        <div class="building-progress__stage-icon">✨</div>
+        <span>인테리어</span>
+      </div>
+    </div>
+    <div class="building-progress__amount">
+      <span id="progress-current">0</span>원 / <span id="progress-goal">5억</span>원
+    </div>
+  </div>
+
+  <!-- Section 1: Our Story -->
+  <section id="story" class="section section--story">
+    <div class="parallax-bg" data-speed="0.3"></div>
+    <div class="container">
+      <div class="section__header reveal-up">
+        <span class="section__label">Our Story</span>
+        <h2 class="section__title">우리들의 이야기</h2>
+        <p class="section__subtitle">70대 산골 교회가 열방과 다음 세대를 품기까지</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item reveal-left">
+          <div class="timeline__year">1983</div>
+          <div class="timeline__card">
+            <h3>제곡교회의 시작</h3>
+            <p>홍천군 남면의 작은 산골 마을에 세워진 제곡교회. 소수의 성도들이 모여 예배를 드리기 시작했습니다.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal-right">
+          <div class="timeline__year">2013</div>
+          <div class="timeline__card">
+            <h3>정영선 목사 부임</h3>
+            <p>새로운 목회 비전과 함께 '꿈꾸는 여행'과 제자훈련을 시작. 성도들과 함께 교회가 변화하기 시작했습니다.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal-left">
+          <div class="timeline__year">11년간</div>
+          <div class="timeline__card">
+            <h3>50km 전도의 열정</h3>
+            <p>매주 50km를 누비며 여름엔 냉커피, 겨울엔 한방차를 나누며 전도. 뜨거운 사랑으로 마을을 품었습니다.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal-right">
+          <div class="timeline__year">현재</div>
+          <div class="timeline__card">
+            <h3>기적 같은 부흥</h3>
+            <p>청장년과 어린이가 북적이고, 러시아·브라질·일본 등 세계 각국의 다문화 성도들이 함께 모이는 기적 같은 부흥의 현장!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-stats reveal-up">
+        <div class="story-stat">
+          <div class="story-stat__number" data-count="41">0</div>
+          <div class="story-stat__label">년의 역사</div>
+        </div>
+        <div class="story-stat">
+          <div class="story-stat__number" data-count="11">0</div>
+          <div class="story-stat__label">년간 전도 사역</div>
+        </div>
+        <div class="story-stat">
+          <div class="story-stat__number" data-count="50">0</div>
+          <div class="story-stat__label">km 매주 전도</div>
+        </div>
+        <div class="story-stat">
+          <div class="story-stat__number" data-count="7">0</div>
+          <div class="story-stat__label">개국 다문화 성도</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Why Now -->
+  <section id="why-now" class="section section--why-now">
+    <div class="parallax-bg parallax-bg--dark" data-speed="0.2"></div>
+    <div class="container">
+      <div class="section__header reveal-up">
+        <span class="section__label">Why Now</span>
+        <h2 class="section__title">왜 지금, 새로운 성전인가?</h2>
+        <p class="section__subtitle">안전하게 예배드릴 수 있는 합법적인 공간이 절실합니다</p>
+      </div>
+
+      <div class="crisis-cards">
+        <div class="crisis-card reveal-up" data-delay="0">
+          <div class="crisis-card__icon">⚠️</div>
+          <h3 class="crisis-card__title">기울어진 종탑</h3>
+          <p class="crisis-card__desc">35년 전 지어진 조립식 판넬 건물 위에 설치된 종탑 컨테이너가 기울어지고 있어 안전이 심각하게 우려되는 상황입니다.</p>
+          <div class="crisis-card__tag">안전 위험</div>
+        </div>
+
+        <div class="crisis-card reveal-up" data-delay="200">
+          <div class="crisis-card__icon">🚫</div>
+          <h3 class="crisis-card__title">불법 증축 벌금</h3>
+          <p class="crisis-card__desc">식당 확보를 위한 증축이 도로를 침범한 불법 건축물이 되어 매년 150만 원의 벌금을 납부하고 있으며, 양성화도 불가능합니다.</p>
+          <div class="crisis-card__tag">연 150만원 벌금</div>
+        </div>
+
+        <div class="crisis-card reveal-up" data-delay="400">
+          <div class="crisis-card__icon">🚗</div>
+          <h3 class="crisis-card__title">주차 공간 부재</h3>
+          <p class="crisis-card__desc">교회 전용 주차장이 없어 도로변에 주차하고 예배를 드리는 실정입니다. 안전과 편의 모두 어려운 상황입니다.</p>
+          <div class="crisis-card__tag">주차난</div>
+        </div>
+      </div>
+
+      <div class="crisis-summary reveal-up">
+        <blockquote>
+          "안전하고 합법적인 예배 공간, 더 이상 미룰 수 없습니다."
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Vision -->
+  <section id="vision" class="section section--vision">
+    <div class="parallax-bg" data-speed="0.25"></div>
+    <div class="container">
+      <div class="section__header reveal-up">
+        <span class="section__label">Our Vision</span>
+        <h2 class="section__title">제곡의 비전</h2>
+        <p class="section__subtitle">새로운 성전으로 펼쳐갈 사역의 꿈</p>
+      </div>
+
+      <div class="vision-showcase reveal-up">
+        <div class="vision-showcase__image">
+          <img src="/src/assets/new-church-vision.png" alt="제곡교회 새 성전 비전 이미지" />
+        </div>
+      </div>
+
+      <div class="vision-cards">
+        <div class="vision-card reveal-up" data-delay="0">
+          <div class="vision-card__number">01</div>
+          <div class="vision-card__icon">🏘️</div>
+          <h3>농어촌교회 자립 네트워크</h3>
+          <p>농어촌교회 자립의 롤모델이 되어, 전국의 작은 교회들과 네트워크를 구성합니다.</p>
+        </div>
+
+        <div class="vision-card reveal-up" data-delay="150">
+          <div class="vision-card__number">02</div>
+          <div class="vision-card__icon">🏥</div>
+          <h3>소규모 요양원 운영</h3>
+          <p>9인 시설 소규모 요양원을 운영하여 지역 어르신들을 섬기는 복지 사역을 펼칩니다.</p>
+        </div>
+
+        <div class="vision-card reveal-up" data-delay="300">
+          <div class="vision-card__number">03</div>
+          <div class="vision-card__icon">🌍</div>
+          <h3>다문화 선교 거점</h3>
+          <p>러시아, 브라질, 일본 등 다문화 성도들의 선교 거점으로서 열방을 품는 교회가 됩니다.</p>
+        </div>
+
+        <div class="vision-card reveal-up" data-delay="450">
+          <div class="vision-card__number">04</div>
+          <div class="vision-card__icon">📖</div>
+          <h3>다음 세대 훈련 공간</h3>
+          <p>아이들과 청소년을 위한 성경 훈련 공간을 마련하여 다음 세대를 세워갑니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Fundraising -->
+  <section id="donate" class="section section--donate">
+    <div class="container">
+      <div class="section__header reveal-up">
+        <span class="section__label">Build Together</span>
+        <h2 class="section__title">함께 지어주세요</h2>
+        <p class="section__subtitle">성도님의 벽돌 한 장이 제곡교회의 내일이 됩니다</p>
+      </div>
+
+      <!-- Category Selection -->
+      <div class="donate-categories reveal-up">
+        <div class="donate-category" data-category="foundation" data-unit-price="50000">
+          <div class="donate-category__icon-wrap">
+            <span class="donate-category__icon">🏗️</span>
+          </div>
+          <h3 class="donate-category__title">기초/토목 공사</h3>
+          <p class="donate-category__tagline">든든한 반석과 생명이 흐르는 터전</p>
+          <p class="donate-category__desc">바닥 공사 및 정화조/상하수도 설비</p>
+          <div class="donate-category__price">1구좌 <strong>50,000</strong>원</div>
+        </div>
+
+        <div class="donate-category" data-category="frame" data-unit-price="100000">
+          <div class="donate-category__icon-wrap">
+            <span class="donate-category__icon">🦴</span>
+          </div>
+          <h3 class="donate-category__title">골조 공사</h3>
+          <p class="donate-category__tagline">든든하게 지탱할 뼈대와 우산</p>
+          <p class="donate-category__desc">H빔 철골조 및 지붕 공사</p>
+          <div class="donate-category__price">1구좌 <strong>100,000</strong>원</div>
+        </div>
+
+        <div class="donate-category selected" data-category="walls" data-unit-price="10000">
+          <div class="donate-category__icon-wrap">
+            <span class="donate-category__icon">🧱</span>
+          </div>
+          <h3 class="donate-category__title">외장/벽면 공사</h3>
+          <p class="donate-category__tagline">따뜻하게 품어줄 벽돌 한 장</p>
+          <p class="donate-category__desc">벽면 마감 및 외장 공사</p>
+          <div class="donate-category__price">1구좌 <strong>10,000</strong>원</div>
+          <div class="donate-category__badge">인기</div>
+        </div>
+
+        <div class="donate-category" data-category="interior" data-unit-price="30000">
+          <div class="donate-category__icon-wrap">
+            <span class="donate-category__icon">✨</span>
+          </div>
+          <h3 class="donate-category__title">내부/인테리어</h3>
+          <p class="donate-category__tagline">희망의 공간을 채워주세요</p>
+          <p class="donate-category__desc">교육·교제·편의 시설 내부 공사</p>
+          <div class="donate-category__price">1구좌 <strong>30,000</strong>원</div>
+        </div>
+      </div>
+
+      <!-- Donation Form -->
+      <div class="donate-form-wrapper reveal-up" id="donate-form-section">
+        <div class="donate-form">
+          <h3 class="donate-form__title">
+            <span id="form-category-icon">🧱</span>
+            <span id="form-category-name">외장/벽면 공사</span> 후원하기
+          </h3>
+
+          <div class="donate-form__field">
+            <label for="donor-name">후원자 이름 (감사의 벽에 새겨집니다)</label>
+            <input type="text" id="donor-name" placeholder="이름을 입력해주세요" maxlength="20" />
+          </div>
+
+          <div class="donate-form__units">
+            <label>구좌 수 선택</label>
+            <div class="unit-selector">
+              <button class="unit-btn" id="unit-decrease">−</button>
+              <div class="unit-display">
+                <span id="unit-count">1</span>구좌
+              </div>
+              <button class="unit-btn" id="unit-increase">+</button>
+            </div>
+            <div class="unit-presets">
+              <button class="unit-preset" data-units="1">1구좌</button>
+              <button class="unit-preset" data-units="5">5구좌</button>
+              <button class="unit-preset" data-units="10">10구좌</button>
+              <button class="unit-preset" data-units="50">50구좌</button>
+            </div>
+          </div>
+
+          <div class="donate-form__total">
+            <span>후원 금액</span>
+            <span class="donate-form__amount" id="total-amount">10,000원</span>
+          </div>
+
+          <button id="donate-submit" class="btn btn--primary btn--full">
+            <span class="btn__icon">🧱</span> 벽돌 <span id="submit-units">1</span>장 후원하기
+          </button>
+
+          <div class="donate-form__bank">
+            <p class="donate-form__bank-title">직접 계좌이체를 원하시면</p>
+            <div class="donate-form__bank-info">
+              <p><strong>농협은행</strong> 352-1234-5678-01</p>
+              <p>예금주: 제곡교회</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Material Donation -->
+      <div class="material-donation reveal-up">
+        <div class="material-donation__content">
+          <h3>🔨 현물(자재) 후원 안내</h3>
+          <p>재정 외에 조립식 판넬, 건축 자재 등 현물로 후원하실 수도 있습니다.</p>
+          <button id="material-donate-btn" class="btn btn--outline">현물 후원 문의하기</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Thank You Wall -->
+  <section id="wall" class="section section--wall">
+    <div class="container">
+      <div class="section__header reveal-up">
+        <span class="section__label">Thank You</span>
+        <h2 class="section__title">감사의 벽</h2>
+        <p class="section__subtitle">사랑의 벽돌로 쌓아가는 제곡교회의 내일</p>
+      </div>
+
+      <div class="wall-container reveal-up">
+        <div id="brick-wall" class="brick-wall">
+          <!-- Bricks will be dynamically generated -->
+        </div>
+      </div>
+
+      <div class="wall-count reveal-up">
+        현재까지 <strong id="total-bricks">0</strong>장의 사랑의 벽돌이 쌓였습니다
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__info">
+          <h3>✝ 제곡교회</h3>
+          <p>강원도 홍천군 남면 제곡리</p>
+          <p>담임목사: 정영선</p>
+          <p>전화: 033-000-0000</p>
+        </div>
+        <div class="footer__bank">
+          <h4>후원 계좌 안내</h4>
+          <p><strong>농협은행</strong> 352-1234-5678-01</p>
+          <p>예금주: 제곡교회</p>
+          <p class="footer__note">※ 입금 시 '성전건축' + 이름을 기재해주세요</p>
+        </div>
+        <div class="footer__links">
+          <h4>바로가기</h4>
+          <a href="#story">우리의 이야기</a>
+          <a href="#why-now">건축의 명분</a>
+          <a href="#vision">비전</a>
+          <a href="#donate">후원하기</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 제곡교회. 새로운 40년의 벽돌을 함께 쌓아주셔서 감사합니다.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Donation Success Modal -->
+  <div id="donation-modal" class="modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="modal-close">✕</button>
+      <div class="modal__icon">🎉</div>
+      <h2 class="modal__title">감사합니다!</h2>
+      <p class="modal__text" id="modal-text"></p>
+      <div class="modal__brick-preview">
+        <div class="modal__brick" id="modal-brick">
+          <span id="modal-donor-name"></span>
+        </div>
+      </div>
+      <p class="modal__sub">감사의 벽에서 벽돌을 확인해보세요 ♥</p>
+      <div class="modal__bank-info">
+        <p><strong>계좌이체 안내</strong></p>
+        <p>농협 352-1234-5678-01 (제곡교회)</p>
+        <p class="modal__bank-note">입금 시 '성전건축+이름' 기재</p>
+      </div>
+      <button class="btn btn--primary" id="modal-confirm">확인</button>
+    </div>
+  </div>
+
+  <!-- Material Donation Modal -->
+  <div id="material-modal" class="modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="material-modal-close">✕</button>
+      <h2 class="modal__title">🔨 현물 후원 문의</h2>
+      <form id="material-form" class="material-form">
+        <div class="material-form__field">
+          <label for="material-name">이름</label>
+          <input type="text" id="material-name" placeholder="이름" required />
+        </div>
+        <div class="material-form__field">
+          <label for="material-phone">연락처</label>
+          <input type="tel" id="material-phone" placeholder="010-0000-0000" required />
+        </div>
+        <div class="material-form__field">
+          <label for="material-item">후원 물품</label>
+          <textarea id="material-item" placeholder="후원하고 싶은 물품 또는 자재를 적어주세요" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">문의 보내기</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
