@@ -150,6 +150,9 @@ export class Fundraising {
     const cat = CATEGORIES[this.selectedCategory];
     const total = cat.unitPrice * this.unitCount;
 
+    // Send donation details via email
+    this.sendDonationEmail(name, cat, total);
+
     // Add bricks to wall
     this.donorWall.addMultipleBricks(name, this.selectedCategory, this.unitCount);
 
@@ -163,6 +166,24 @@ export class Fundraising {
     if (this.donorNameInput) this.donorNameInput.value = '';
     this.unitCount = 1;
     this.updateDisplay();
+  }
+
+  sendDonationEmail(name, category, amount) {
+    const subject = encodeURIComponent(`[제곡교회 성전건축] 후원 신청 - ${name}`);
+    const body = encodeURIComponent(
+      `제곡교회 새 성전 건축 후원 신청\n` +
+      `========================================\n\n` +
+      `■ 후원자 이름: ${name}\n` +
+      `■ 후원 분야: ${category.icon} ${category.name}\n` +
+      `■ 구좌 수: ${this.unitCount}구좌\n` +
+      `■ 1구좌 금액: ${category.unitPrice.toLocaleString()}원\n` +
+      `■ 총 후원 금액: ${amount.toLocaleString()}원\n\n` +
+      `========================================\n` +
+      `입금 계좌: 농협은행 352-1234-5678-01 (제곡교회)\n` +
+      `입금 시 '성전건축 + 이름' 기재 부탁드립니다.\n\n` +
+      `감사합니다. 하나님께서 풍성히 채워주실 줄 믿습니다!\n`
+    );
+    window.open(`mailto:vip7612@gmail.com?subject=${subject}&body=${body}`, '_self');
   }
 
   showSuccessModal(name, category, amount) {
@@ -202,7 +223,23 @@ export class Fundraising {
 
   handleMaterialSubmit(e) {
     e.preventDefault();
-    // Simulate submission
+
+    const materialName = document.getElementById('material-name')?.value.trim() || '';
+    const materialPhone = document.getElementById('material-phone')?.value.trim() || '';
+    const materialItem = document.getElementById('material-item')?.value.trim() || '';
+
+    const subject = encodeURIComponent(`[제곡교회 성전건축] 현물 후원 문의 - ${materialName}`);
+    const body = encodeURIComponent(
+      `제곡교회 새 성전 건축 현물(자재) 후원 문의\n` +
+      `========================================\n\n` +
+      `■ 이름: ${materialName}\n` +
+      `■ 연락처: ${materialPhone}\n` +
+      `■ 후원 물품/자재: ${materialItem}\n\n` +
+      `========================================\n` +
+      `확인 후 연락 부탁드립니다. 감사합니다!\n`
+    );
+    window.open(`mailto:vip7612@gmail.com?subject=${subject}&body=${body}`, '_self');
+
     alert('현물 후원 문의가 접수되었습니다.\n교회에서 곧 연락드리겠습니다. 감사합니다!');
     this.materialForm?.reset();
     this.closeMaterialModal();
